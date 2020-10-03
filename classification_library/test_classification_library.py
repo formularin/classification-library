@@ -20,6 +20,6 @@ def test_audio_classifier():
 
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
-    assert predictions[:-1] == y_test[:-1]
+    assert (predictions[:-1] == y_test[:-1]).all()
     with pytest.raises(ValueError):
         model.predict(np.zeros((2, 2)))

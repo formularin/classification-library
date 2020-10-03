@@ -4,10 +4,13 @@
 cimport numpy as np
 
 
+cdef str __version__ = "0.0.1"
+
+
 cdef class AudioClassifier:
     cdef list _classes, _cache_x, _cache_y
 
     cdef public int alpha
 
-    cpdef void fit(np.ndarray X, np.ndarray[ndim=1] y) except *
-    cpdef np.ndarray[ndim=1] predict(np.ndarray X)
+    cpdef void fit(self, np.ndarray X, np.ndarray y) except *
+    cpdef np.ndarray predict(self, np.ndarray X)

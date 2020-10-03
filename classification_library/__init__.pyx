@@ -1,12 +1,15 @@
 #!python
 #cython: language_level=3
-"""A machine learning package.
+"""A classification library using a novel audio-inspired technique.
 """
 
 import pickle
 
 cimport numpy as np
 import numpy as np
+
+
+__version__ = "0.0.1"
 
 
 cdef class AudioClassifier:
@@ -27,7 +30,7 @@ cdef class AudioClassifier:
 
         np.random.seed(self.alpha)
 
-    cpdef void fit(np.ndarray X, np.ndarray[ndim=1] y) except *:
+    cpdef void fit(self, np.ndarray X, np.ndarray y) except *:
         """Fits the model to a training dataset.
 
         Parameters
@@ -44,7 +47,7 @@ cdef class AudioClassifier:
             self._cache_x.append(x_val)
             self._cache_y.append(y_val)
 
-    cpdef np.ndarray[ndim=1] predict(np.ndarray X):
+    cpdef np.ndarray predict(self, np.ndarray X):
         """Makes predictions based off of the model's knowledge gained
         from training.
 
@@ -58,7 +61,7 @@ cdef class AudioClassifier:
         np.ndarray
             The classifier's predictions on the inputted X values.
         """
-        cdef np.ndarray[ndim=1] y = np.zeros(X.shape[0])
+        cdef np.ndarray y = np.zeros(X.shape[0])
         cdef object x
         cdef int i, _cache_y_index
 
