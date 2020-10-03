@@ -20,12 +20,13 @@ pip install git+https://github.com/lol-cubes/classification-library
 
 ```python
 from classification_library import AudioClassifier
+import numpy as np
 
 
-X_train = ...
-y_train = ...
-X_test = ...
-y_test = ...
+X_train = np.array([1, 2, 3, 4])
+y_train = np.array([1, 4, 9, 16])
+X_test = np.array([5, 6])
+y_test = np.array([25, 36])
 
 
 model = AudioClassifier(alpha=10)
