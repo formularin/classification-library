@@ -10,7 +10,7 @@ with open("README.md", 'r') as f:
 
 setup(
     name="classification_library",
-    version="0.0.2",
+    version="0.0.3",
     packages=find_packages(),
     author="Arin Khare",
     description="A classification library using a novel audio-inspired algorithm.",
