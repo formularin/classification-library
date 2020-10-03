@@ -19,7 +19,7 @@ pip install git+https://github.com/lol-cubes/classification-library
 ## Usage
 
 ```python
-from classification_library import Classifier
+from classification_library import AudioClassifier
 
 
 X_train = ...
@@ -28,7 +28,7 @@ X_test = ...
 y_test = ...
 
 
-model = Classifier(alpha=10)
+model = AudioClassifier(alpha=10)
 model.fit(X_train, y_train)
 
 predictions = model.predict(X_test)

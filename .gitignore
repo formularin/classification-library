@@ -8,13 +8,14 @@ TODO.md
 # Cython
 classification_library/*.so
 classification_library/*.c
+build/
 
 # Python
 venv/
 __pycache__/
 
 # Pip
-cygraph.egg-info/
+classification_library.egg-info/
 dist/
 .eggs/
 
