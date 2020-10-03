@@ -1,3 +1,2 @@
-classification_library/__init__.pyx
-classification_library/__init__.pxd
-classification_library/data
+include classification_library/__init__.pxd
+include classification_library/data

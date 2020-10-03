@@ -4,7 +4,7 @@
 cimport numpy as np
 
 
-cdef str __version__ = "0.0.1"
+cdef str __version__ = "0.0.2"
 
 
 cdef class AudioClassifier:
