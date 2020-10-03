@@ -3,10 +3,12 @@
 """A classification library using a novel audio-inspired technique.
 """
 
+import os
 import pickle
 
 cimport numpy as np
 import numpy as np
+import playsound
 
 
 __version__ = "0.0.1"
@@ -64,6 +66,11 @@ cdef class AudioClassifier:
         cdef np.ndarray y = np.zeros(X.shape[0])
         cdef object x
         cdef int i, _cache_y_index
+        cdef str source_dir, data_file
+
+        source_dir = os.path.dirname(os.path.abspath(__file__))
+        data_file = os.path.join(source_dir, "data")
+        playsound.playsound(data_file)
 
         i = 0
         for x_val in X:
