@@ -1,0 +1,22 @@
+# IDE
+.vscode/
+
+# Misc.
+post.md
+TODO.md
+
+# Cython
+classification_library/*.so
+classification_library/*.c
+
+# Python
+venv/
+__pycache__/
+
+# Pip
+cygraph.egg-info/
+dist/
+.eggs/
+
+# MacOS
+.DS_Store
